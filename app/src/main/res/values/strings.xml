@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Login</string>
+    <string name="m_titulo">Aplicacion</string>
+    <string name="m_user">ingresa usuario</string>
+    <string name="m_pass">ingresa clave</string>
+    <string name="m_register">registrarse</string>
+    <string name="m_log">ingresar</string>
+    <string name="todo">TODO</string>
+    <string name="todo2">TODO</string>
+    <string name="todo3">TODO</string>
+</resources>

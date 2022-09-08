@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/m_titulo"
+        android:layout_width="323dp"
+        android:layout_height="70dp"
+        android:rotationX="39"
+        android:text="@string/m_titulo"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="35sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.373" />
+
+    <EditText
+        android:id="@+id/m_user"
+        android:layout_width="185dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="@string/m_user"
+        android:inputType="textPersonName"
+        android:textColorHint="#757575"
+        app:layout_constraintEnd_toEndOf="@+id/m_titulo"
+        app:layout_constraintHorizontal_bias="0.826"
+        app:layout_constraintStart_toStartOf="@+id/m_titulo"
+        app:layout_constraintTop_toBottomOf="@+id/m_titulo"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/m_pass"
+        android:layout_width="185dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/m_pass"
+        android:inputType="textPassword"
+        android:textColorHint="#757575"
+        app:layout_constraintEnd_toEndOf="@+id/m_user"
+        app:layout_constraintTop_toBottomOf="@+id/m_user"
+        android:autofillHints="" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="53dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintEnd_toStartOf="@+id/m_pass"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        app:srcCompat="@drawable/icono"
+        android:contentDescription="@string/todo2" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="119dp"
+        android:layout_height="123dp"
+        app:layout_constraintBottom_toTopOf="@+id/m_titulo"
+        app:layout_constraintEnd_toEndOf="@+id/m_titulo"
+        app:layout_constraintStart_toStartOf="@+id/m_titulo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/login"
+        android:contentDescription="@string/todo3" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="53dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintEnd_toStartOf="@+id/m_user"
+        app:layout_constraintTop_toBottomOf="@+id/m_titulo"
+        app:srcCompat="@drawable/user"
+        android:contentDescription="@string/todo" />
+
+    <Button
+        android:id="@+id/m_register"
+        android:layout_width="154dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/m_log"
+        app:layout_constraintEnd_toEndOf="@+id/m_titulo"
+        app:layout_constraintTop_toBottomOf="@+id/m_pass" />
+
+    <Button
+        android:id="@+id/m_log"
+        android:layout_width="154dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/m_register"
+        app:layout_constraintStart_toStartOf="@+id/m_titulo"
+        app:layout_constraintTop_toBottomOf="@+id/m_pass" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Login</string>
+    <string name="m_titulo">App</string>
+    <string name="m_user">input user</string>
+    <string name="m_pass">input password</string>
+    <string name="m_register">register</string>
+    <string name="m_log">login</string>
+</resources>
