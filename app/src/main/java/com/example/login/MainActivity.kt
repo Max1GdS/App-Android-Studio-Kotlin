@@ -22,16 +22,18 @@ class MainActivity : AppCompatActivity() {
 
         val user = findViewById<EditText>(R.id.m_user)
         val textuser = user.text.toString()
+
         val pass = findViewById<EditText>(R.id.m_pass)
         val textpass = pass.text.toString()
 
-
         val intento1 =
-            Intent(this, MainActivity2::class.java).apply { putExtra("usuario", textuser) }
+            Intent(this, MainActivity2::class.java).apply { putExtra("user", textuser) }
+
+        Toast.makeText(this, "el usuario es :" + user.text, Toast.LENGTH_SHORT).show()
 
         if ((textuser == "charly") and (textpass == "123")) {
             startActivity(intento1)
         }
-        Toast.makeText(this, "el usuario es :" + user.text, Toast.LENGTH_SHORT).show()
+
     }
 }
