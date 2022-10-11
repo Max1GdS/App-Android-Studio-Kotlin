@@ -8,46 +8,48 @@
 
     <TextView
         android:id="@+id/m_titulo"
-        android:layout_width="323dp"
-        android:layout_height="70dp"
+        android:layout_width="276dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="12dp"
         android:rotationX="39"
         android:text="@string/m_titulo"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textSize="35sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.373" />
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <EditText
         android:id="@+id/m_user"
         android:layout_width="185dp"
         android:layout_height="57dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="12dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/m_user"
         android:inputType="textPersonName"
+        android:rotationX="17"
         android:textColorHint="#757575"
         app:layout_constraintEnd_toEndOf="@+id/m_titulo"
-        app:layout_constraintHorizontal_bias="0.826"
+        app:layout_constraintHorizontal_bias="0.824"
         app:layout_constraintStart_toStartOf="@+id/m_titulo"
-        app:layout_constraintTop_toBottomOf="@+id/m_titulo"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/m_titulo" />
 
     <EditText
         android:id="@+id/m_pass"
         android:layout_width="185dp"
         android:layout_height="57dp"
         android:layout_marginTop="8dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/m_pass"
         android:inputType="textPassword"
+        android:rotationX="17"
         android:textColorHint="#757575"
         app:layout_constraintEnd_toEndOf="@+id/m_user"
-        app:layout_constraintTop_toBottomOf="@+id/m_user"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/m_user" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -55,51 +57,77 @@
         android:layout_height="59dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="12dp"
+        android:contentDescription="@string/todo2"
         app:layout_constraintEnd_toStartOf="@+id/m_pass"
+        app:layout_constraintStart_toStartOf="@+id/m_titulo"
         app:layout_constraintTop_toBottomOf="@+id/imageView3"
-        app:srcCompat="@drawable/icono"
-        android:contentDescription="@string/todo2" />
+        app:srcCompat="@drawable/icono" />
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="119dp"
-        android:layout_height="123dp"
-        app:layout_constraintBottom_toTopOf="@+id/m_titulo"
-        app:layout_constraintEnd_toEndOf="@+id/m_titulo"
-        app:layout_constraintStart_toStartOf="@+id/m_titulo"
+        android:layout_width="109dp"
+        android:layout_height="93dp"
+        android:contentDescription="@string/todo3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/login"
-        android:contentDescription="@string/todo3" />
+        app:layout_constraintVertical_bias="0.05"
+        app:srcCompat="@drawable/login" />
 
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="53dp"
         android:layout_height="57dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="12dp"
+        android:contentDescription="@string/todo"
         app:layout_constraintEnd_toStartOf="@+id/m_user"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="@+id/m_titulo"
         app:layout_constraintTop_toBottomOf="@+id/m_titulo"
-        app:srcCompat="@drawable/user"
-        android:contentDescription="@string/todo" />
+        app:srcCompat="@drawable/user" />
 
     <Button
         android:id="@+id/m_register"
-        android:layout_width="154dp"
-        android:layout_height="41dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/m_log"
+        android:layout_width="139dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="-30dp"
+        android:text="@string/m_register"
         app:layout_constraintEnd_toEndOf="@+id/m_titulo"
         app:layout_constraintTop_toBottomOf="@+id/m_pass" />
 
     <Button
         android:id="@+id/m_log"
-        android:layout_width="154dp"
-        android:layout_height="41dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/m_register"
+        android:layout_width="139dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="-30dp"
+        android:layout_marginTop="28dp"
+        android:onClick="BotonClick"
+        android:text="@string/m_log"
         app:layout_constraintStart_toStartOf="@+id/m_titulo"
         app:layout_constraintTop_toBottomOf="@+id/m_pass" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="left"
+        tools:layout_editor_absoluteX="769dp"
+        tools:layout_editor_absoluteY="80dp" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="left"
+        tools:layout_editor_absoluteX="589dp"
+        tools:layout_editor_absoluteY="81dp" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="left"
+        tools:layout_editor_absoluteX="235dp"
+        tools:layout_editor_absoluteY="11dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
