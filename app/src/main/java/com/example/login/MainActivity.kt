@@ -7,11 +7,16 @@ import android.util.Log
 import android.view.View
 import android.widget.EditText
 import android.widget.Toast
+import com.example.login.Database.DB
+import com.example.login.Models.Producto
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        val producto = Producto("Cocacola", 22)
+        val mibase = DB(this,null,null, null)
+        mibase.addProducto(producto)
     }
     fun BotonClick(v : View) {
         var edad = 22
